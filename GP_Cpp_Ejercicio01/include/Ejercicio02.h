@@ -8,3 +8,7 @@
 using namespace std;
 
 void Ejercicio02(string);
+
+unsigned int unsignedIntFromBinary(string);
+
+void printBinaryAsUnsignedInt();

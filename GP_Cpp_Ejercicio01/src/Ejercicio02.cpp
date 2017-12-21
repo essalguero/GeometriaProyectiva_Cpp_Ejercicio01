@@ -27,3 +27,11 @@ void Ejercicio02(string stringNumero) {
 	cout << "Valor shift << 6: " << nuevoValor << " --> " << binaryFromInt(nuevoValor) << endl;
 
 }
+
+unsigned int unsignedIntFromBinary(string numero) {
+	return 0;
+}
+
+void printBinaryAsUnsignedInt() {
+
+}
