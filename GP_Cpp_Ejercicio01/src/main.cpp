@@ -50,7 +50,7 @@ void main(int argc, char** argv) {
 
 	int valor01 = binarioBase10("1010");
 
-	cout << "El numero 1010 binario se coresponde con el valor " << valor01 << " en base 10" << endl;
+	cout << "El numero 1010 binario se corresponde con el valor " << valor01 << " en base 10" << endl;
 
 	cout << endl << endl;
 
@@ -58,10 +58,22 @@ void main(int argc, char** argv) {
 
 	int valor02 = ~0;
 	string stringValor02 = binaryFromInt(valor02);
+	int valor02Unsigned = unsignedIntFromBinary(stringValor02);
 	cout << "El numero ~0 es en binario: " << stringValor02 << " Que es el valor unsigned: ";
 	printBinaryAsUnsignedInt(stringValor02);
 	cout << " Y con signo: ";
 	printBinaryAsInt(stringValor02);
+	cout << endl;
+
+	valor02 = valor02 << 1;
+	valor02Unsigned = valor02Unsigned << 1;
+	cout << "El numero ~0 (con un shift lógico) es en binario: ";
+	printIntAsBinary(valor02);
+	cout << " Que es el valor signed: " << valor02 << " y unsigned: " << valor02Unsigned;
+
+
+
 	cout << endl << endl;
+
 
 }
