@@ -56,4 +56,12 @@ void main(int argc, char** argv) {
 
 	Ejercicio02("1010");
 
+	int valor02 = ~0;
+	string stringValor02 = binaryFromInt(valor02);
+	cout << "El numero ~0 es en binario: " << stringValor02 << " Que es el valor unsigned: ";
+	printBinaryAsUnsignedInt(stringValor02);
+	cout << " Y con signo: ";
+	printBinaryAsInt(stringValor02);
+	cout << endl << endl;
+
 }

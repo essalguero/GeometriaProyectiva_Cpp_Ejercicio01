@@ -29,9 +29,14 @@ void Ejercicio02(string stringNumero) {
 }
 
 unsigned int unsignedIntFromBinary(string numero) {
-	return 0;
+
+	
+	unsigned int valorSinSigno = intFromBinary(numero);
+
+	return valorSinSigno;
 }
 
-void printBinaryAsUnsignedInt() {
-
+void printBinaryAsUnsignedInt(string numero) {
+	cout << unsignedIntFromBinary(numero);
 }
+
