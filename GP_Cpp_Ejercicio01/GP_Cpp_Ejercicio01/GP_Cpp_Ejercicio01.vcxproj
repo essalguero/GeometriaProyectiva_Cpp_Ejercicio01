@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClInclude Include="..\include\common.h" />
     <ClInclude Include="..\include\Ejercicio00.h" />
+    <ClInclude Include="..\include\Ejercicio02.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\common.cpp" />
     <ClCompile Include="..\src\Ejercicio00.cpp" />
+    <ClCompile Include="..\src\Ejercicio02.cpp" />
     <ClCompile Include="..\src\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

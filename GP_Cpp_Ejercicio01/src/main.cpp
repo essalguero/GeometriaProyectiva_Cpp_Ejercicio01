@@ -1,9 +1,13 @@
+# pragma once
+
 #include <string>
 #include <iostream>
 
 #include "common.h"
 
 #include "Ejercicio00.h"
+#include "Ejercicio02.h"
+
 using namespace std;
 
 void main(int argc, char** argv) {
@@ -40,9 +44,16 @@ void main(int argc, char** argv) {
 	cout << endl;
 	printBinaryAsInt("10000000001");
 	cout << endl;
+	cout << endl;
+	cout << endl;
 
 
-	int valor00 = binarioBase10("1010");
+	int valor01 = binarioBase10("1010");
 
-	cout << "El numero 1010 binario se coresponde con el valor " << valor00 << " base 10" << endl;
+	cout << "El numero 1010 binario se coresponde con el valor " << valor01 << " en base 10" << endl;
+
+	cout << endl << endl;
+
+	Ejercicio02("1010");
+
 }
