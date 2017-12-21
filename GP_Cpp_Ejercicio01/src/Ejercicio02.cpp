@@ -17,4 +17,13 @@ void Ejercicio02(string stringNumero) {
 	cout << "valorNumeroNegado: " << valorNumeroNegado << endl;
 
 
+	int nuevoValor = valorNumero << 1;
+	cout << "Valor shift << 1: " << nuevoValor << " --> " << binaryFromInt(nuevoValor) << endl;
+	nuevoValor = valorNumero << 2;
+	cout << "Valor shift << 2: " << nuevoValor << " --> " << binaryFromInt(nuevoValor) << endl;
+	nuevoValor = valorNumero << 5;
+	cout << "Valor shift << 5: " << nuevoValor << " --> " << binaryFromInt(nuevoValor) << endl;
+	nuevoValor = valorNumero << 6;
+	cout << "Valor shift << 6: " << nuevoValor << " --> " << binaryFromInt(nuevoValor) << endl;
+
 }
