@@ -3,25 +3,46 @@
 
 #include "common.h"
 
+#include "Ejercicio00.h"
 using namespace std;
 
 void main(int argc, char** argv) {
 
 	cout << "main function" << endl;
 
-	cout << "Binario de 0: " << binaryFromInt(0) << endl;
-	cout << "Binario de 1: " << binaryFromInt(1) << endl;
-	cout << "Binario de 2: " << binaryFromInt(2) << endl;
-	cout << "Binario de 4: " << binaryFromInt(4) << endl;
-	cout << "Binario de 8: " << binaryFromInt(8) << endl;
-	cout << "Binario de 16: " << binaryFromInt(16) << endl;
-	cout << "Binario de 1025: " << binaryFromInt(1025) << endl;
+	printIntAsBinary(0);
+	cout << endl;
+	printIntAsBinary(1);
+	cout << endl;
+	printIntAsBinary(2);
+	cout << endl;
+	printIntAsBinary(4);
+	cout << endl;
+	printIntAsBinary(8);
+	cout << endl;
+	printIntAsBinary(16);
+	cout << endl;
+	printIntAsBinary(1025);
+	cout << endl;
 
-	cout << "Int de 00000000: " << intFromBinary("00000000") << endl;
-	cout << "Int de 00000001: " << intFromBinary("00000001") << endl;
-	cout << "Int de 00000010: " << intFromBinary("00000010") << endl;
-	cout << "Int de 00000100: " << intFromBinary("00000100") << endl;
-	cout << "Int de 00001000: " << intFromBinary("00001000") << endl;
-	cout << "Int de 00010000: " << intFromBinary("00010000") << endl;
-	cout << "Int de 10000000001: " << intFromBinary("10000000001") << endl;
+
+	printBinaryAsInt("00000000");
+	cout << endl;
+	printBinaryAsInt("00000001");
+	cout << endl;
+	printBinaryAsInt("00000010");
+	cout << endl;
+	printBinaryAsInt("00000100");
+	cout << endl;
+	printBinaryAsInt("00001000");
+	cout << endl;
+	printBinaryAsInt("00010000");
+	cout << endl;
+	printBinaryAsInt("10000000001");
+	cout << endl;
+
+
+	int valor00 = binarioBase10("1010");
+
+	cout << "El numero 1010 binario se coresponde con el valor " << valor00 << " base 10" << endl;
 }

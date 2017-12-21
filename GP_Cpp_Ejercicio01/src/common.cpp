@@ -1,6 +1,9 @@
 #pragma once
 
+#include <iostream>
+
 #include "common.h"
+
 
 int intFromBinary(const std::string& number) {
 	int valor = 0;
@@ -36,9 +39,9 @@ std::string binaryFromInt(int x) {
 }
 
 void printIntAsBinary(int x) {
-
+	cout << binaryFromInt(x);
 }
 
 void printBinaryAsInt(const std::string& number) {
-
+	cout << intFromBinary(number);
 }
