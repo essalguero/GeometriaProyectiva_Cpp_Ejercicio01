@@ -4,9 +4,6 @@
 #include <iostream>
 
 
-#include <excpt.h>
-#include <Windows.h>
-
 #include "common.h"
 
 #include "Ejercicio00.h"
@@ -16,33 +13,8 @@
 using namespace std;
 
 
-/*class divisionbyzero_exception : public std::runtime_error {
-public:
-	divisionbyzero_exception() : std::runtime_error("Division by zero") {}
-};
-
-void translate_seh_exception(unsigned int exceptioncode, struct _EXCEPTION_POINTERS* pExp) {
-	if (exceptioncode == 0xc0000094) throw divisionbyzero_exception();
-}*/
 
 
-
-// Filter for the stack overflow exception.  
-// This function traps the stack overflow exception, but passes  
-// all other exceptions through.   
-int stack_overflow_exception_filter(int exception_code)
-{
-	if (exception_code == EXCEPTION_STACK_OVERFLOW)
-	{
-		// Do not call _resetstkoflw here, because  
-		// at this point, the stack is not yet unwound.  
-		// Instead, signal that the handler (the __except block)  
-		// is to be executed.  
-		return EXCEPTION_EXECUTE_HANDLER;
-	}
-	else
-		return EXCEPTION_CONTINUE_SEARCH;
-}
 
 
 
@@ -189,27 +161,52 @@ void main(int argc, char** argv) {
 
 	cout << "Apartado b" << endl << endl;
 
-	//_set_se_translator(translate_seh_exception);
 	int zero = 0;
 	double zeroDividedZero = 0;
 	//Comentado Exception
 	//zeroDividedZero = zero / zero;
-	//cout << "El valor de 0/0 es: " << zeroDividedZero << endl << endl;
+	cout << "El valor de 0/0 es: " << zeroDividedZero << endl << endl;
 
 
-	cout << "El valor de 1.0f / 0f es: " << 1.0f / static_cast<float>(zero) << endl;
+
+	cout << "Apartado c" << endl << endl;
+
+	cout << "El valor de 1.0f / 0f es: " << 1.0f / static_cast<float>(zero) << endl << endl;
 	
+
+	cout << "Apartado d" << endl << endl;
+
 	float point2 = 0.2f;
-	printf("%1.16f\n", point2);
+	printf("%1.16f\n\n", point2);
 
 
+	cout << "Apartado e" << endl << endl;
+	cout << "Limitaciones de precisión con el formato" << endl << endl;
+
+
+	cout << "Apartado f" << endl << endl;
 
 	float f = 0.1f;
 	float sum = 0;
 	for (int i = 0; i < 100; ++i)
 		sum += f;
-	float product = f * 100;	cout << "Numero mediante sumas: ";
+	float product = f * 100;
+	cout << "Apartado g" << endl << endl;	cout << "Numero mediante sumas: ";
 	printf("%1.15f\n", sum);	cout << "Numero mediante producto: ";
-	printf("%1.15f\n", product);
+	printf("%1.15f\n\n", product);
+
+
+	cout << "Apartado h" << endl << endl;
+
+	float margen = 0.00001;
+	bool iguales = (abs(product - sum) <= margen);
+	string stringIguales = (iguales == 1) ? "true" : "false";
+	cout << "Un método para comprobar si dos números en coma flotante son iguales es asignar ";
+	cout << "un margen en el que pueden diferir y aún considerar que son iguales, es decir, ";
+	cout << "definir un margen de error:" << endl << endl;
+
+	cout << "product y sum son iguales si hay una diferencia de menos de " << margen << endl;
+	cout << "product == sum: " << stringIguales << endl;
+	cout << "product - sum = " << abs(product - sum) << endl << endl << endl;
 
 }
