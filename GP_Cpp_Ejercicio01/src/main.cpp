@@ -95,7 +95,7 @@ void main(int argc, char** argv) {
 
 	int valorGreen = pink & valorComparacion;
 	cout << "El valor Verde del color pink es: " << valorGreen << endl;
-	
+
 	pink = pink >> 8;
 
 	int valorRed = pink & valorComparacion;
@@ -172,7 +172,7 @@ void main(int argc, char** argv) {
 	cout << "Apartado c" << endl << endl;
 
 	cout << "El valor de 1.0f / 0f es: " << 1.0f / static_cast<float>(zero) << endl << endl;
-	
+
 
 	cout << "Apartado d" << endl << endl;
 
@@ -190,9 +190,16 @@ void main(int argc, char** argv) {
 	float sum = 0;
 	for (int i = 0; i < 100; ++i)
 		sum += f;
-	float product = f * 100;
-	cout << "Apartado g" << endl << endl;	cout << "Numero mediante sumas: ";
-	printf("%1.15f\n", sum);	cout << "Numero mediante producto: ";
+	float product = f * 100;
+
+
+	cout << "Apartado g" << endl << endl;
+
+	cout << "Numero mediante sumas: ";
+
+	printf("%1.15f\n", sum);
+	cout << "Numero mediante producto: ";
+
 	printf("%1.15f\n\n", product);
 
 
