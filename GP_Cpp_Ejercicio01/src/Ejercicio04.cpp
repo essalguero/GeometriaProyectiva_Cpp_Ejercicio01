@@ -26,6 +26,8 @@ void Ejercicio04::ApartadoA() {
 	
 }
 
+/// La division 0/0 genera una excepcion. Consultando en algunos foros en internet, se llega a la conclusión de que la excepcion no puede capturarse 
+/// en un bloque try-catch. Por ese motivo se deja representada la operación (linea comentada dentro del método)
 void Ejercicio04::ApartadoB() {
 	cout << "Apartado b" << endl << endl;
 

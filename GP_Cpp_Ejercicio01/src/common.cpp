@@ -5,6 +5,7 @@
 #include "common.h"
 
 
+///Realiza un test, no muy intensivo, para  probar que el funcionamiento de las funciones es correcto
 void Common::test() {
 	Common::printIntAsBinary(0);
 	cout << endl;
@@ -45,6 +46,7 @@ void Common::test() {
 	cout << endl;
 }
 
+/// Genera un numero entero a partir de una cadena que representa un numero binario
 int Common::intFromBinary(const std::string& number) {
 	int valor = 0;
 
@@ -58,6 +60,7 @@ int Common::intFromBinary(const std::string& number) {
 	return valor;
 }
 
+/// Genera una cadena que representa el valor binario del entero pasado como parametro
 string Common::binaryFromInt(int x) {
 	string numero = "";
 
@@ -78,10 +81,12 @@ string Common::binaryFromInt(int x) {
 	return numero;
 }
 
+/// Imprime el numero entero pasado como parametro en formato binario
 void Common::printIntAsBinary(int x) {
 	cout << binaryFromInt(x);
 }
 
+/// Imprime el string pasado como parametro, que representa un numero en binario,como un entero
 void Common::printBinaryAsInt(const std::string& number) {
 	cout << intFromBinary(number);
 }

@@ -41,7 +41,6 @@ void Ejercicio02::ApartadoB(string stringNumero) {
 
 	int valorNumero = Common::intFromBinary(stringNumero);
 
-
 	int nuevoValor = valorNumero << 1;
 	cout << "Valor shift << 1: " << nuevoValor << " --> " << Common::binaryFromInt(nuevoValor) << endl;
 	nuevoValor = valorNumero << 2;
@@ -129,6 +128,7 @@ void Ejercicio02::ApartadoC_iii() {
 	cout << endl << endl;
 }
 
+/// Transforma la cadena pasada como parametro, y que representa un número en binario, en un unsigned int y lo imprime
 unsigned int Ejercicio02::unsignedIntFromBinary(string numero) {
 
 	
@@ -137,11 +137,12 @@ unsigned int Ejercicio02::unsignedIntFromBinary(string numero) {
 	return valorSinSigno;
 }
 
+/// Imprime por pantalla la cadena pasada como parametro, y que representa un número en binario, en formato unsigned int
 void Ejercicio02::printBinaryAsUnsignedInt(string numero) {
 	cout << unsignedIntFromBinary(numero);
 }
 
-
+///Realiza un test, no muy intensivo, para  probar que el funcionamiento de las funciones es correcto
 void Ejercicio02::test() {
 
 	unsigned int valor;

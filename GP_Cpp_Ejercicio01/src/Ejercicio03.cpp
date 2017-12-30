@@ -71,7 +71,7 @@ void Ejercicio03::ApartadoC_ii() {
 }
 
 
-
+/// Obtiene la representacion en binario (string) del caracter pasado como parametro
 string Ejercicio03::binaryFromChar(const char c) {
 	string valor = "";
 	char caracter = c;
@@ -94,6 +94,7 @@ string Ejercicio03::binaryFromChar(const char c) {
 	
 }
 
+/// Obtiene la representacion en binario (string) del caracter (unsigned char) pasado como parametro
 string Ejercicio03::binaryFromUnsignedChar(const unsigned char c) {
 	
 	string valor = "";
@@ -115,6 +116,8 @@ string Ejercicio03::binaryFromUnsignedChar(const unsigned char c) {
 	return valor;
 }
 
+
+///Realiza un test, no muy intensivo, para  probar que el funcionamiento de las funciones es correcto
 void Ejercicio03::test() {
 	char c = 'a';
 	unsigned char uc = 'c';
