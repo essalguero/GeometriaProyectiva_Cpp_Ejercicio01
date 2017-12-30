@@ -5,7 +5,47 @@
 #include "common.h"
 
 
-int intFromBinary(const std::string& number) {
+void Common::test() {
+	Common::printIntAsBinary(0);
+	cout << endl;
+	Common::printIntAsBinary(1);
+	cout << endl;
+	Common::printIntAsBinary(2);
+	cout << endl;
+	Common::printIntAsBinary(4);
+	cout << endl;
+	Common::printIntAsBinary(8);
+	cout << endl;
+	Common::printIntAsBinary(16);
+	cout << endl;
+	Common::printIntAsBinary(1023);
+	cout << endl;
+	Common::printIntAsBinary(1025);
+	cout << endl;
+	cout << endl;
+
+
+	Common::printBinaryAsInt("00000000");
+	cout << endl;
+	Common::printBinaryAsInt("00000001");
+	cout << endl;
+	Common::printBinaryAsInt("00000010");
+	cout << endl;
+	Common::printBinaryAsInt("00000100");
+	cout << endl;
+	Common::printBinaryAsInt("00001000");
+	cout << endl;
+	Common::printBinaryAsInt("00010000");
+	cout << endl;
+	Common::printBinaryAsInt("1111111111");
+	cout << endl;
+	Common::printBinaryAsInt("10000000001");
+	cout << endl;
+	cout << endl;
+	cout << endl;
+}
+
+int Common::intFromBinary(const std::string& number) {
 	int valor = 0;
 
 	for (int i = 0; i < number.length(); i++) {
@@ -18,7 +58,7 @@ int intFromBinary(const std::string& number) {
 	return valor;
 }
 
-std::string binaryFromInt(int x) {
+string Common::binaryFromInt(int x) {
 	string numero = "";
 
 	int valorComparacion = 1;
@@ -38,10 +78,10 @@ std::string binaryFromInt(int x) {
 	return numero;
 }
 
-void printIntAsBinary(int x) {
+void Common::printIntAsBinary(int x) {
 	cout << binaryFromInt(x);
 }
 
-void printBinaryAsInt(const std::string& number) {
+void Common::printBinaryAsInt(const std::string& number) {
 	cout << intFromBinary(number);
 }

@@ -7,8 +7,22 @@
 
 using namespace std;
 
-void Ejercicio02(string);
+class Ejercicio02 {
+public:
+	Ejercicio02(string);
 
-unsigned int unsignedIntFromBinary(string);
+	static unsigned int unsignedIntFromBinary(string);
 
-void printBinaryAsUnsignedInt(string);
+	static void printBinaryAsUnsignedInt(string);
+
+	void ApartadoA(string);
+	void ApartadoB(string);
+	void ApartadoC();
+
+
+	void ApartadoC_i();
+	void ApartadoC_ii();
+	void ApartadoC_iii();
+
+	static void test();
+};

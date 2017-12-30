@@ -4,10 +4,16 @@
 
 using namespace std;
 
+static class Common {
 
+public:
 
-int intFromBinary(const std::string& number);
-std::string binaryFromInt(int x);
+	static void test();
 
-void printIntAsBinary(int x);
-void printBinaryAsInt(const std::string& number);
+	static int intFromBinary(const std::string& number);
+	static string binaryFromInt(int x);
+
+	static void printIntAsBinary(int x);
+	static void printBinaryAsInt(const std::string& number);
+
+};
