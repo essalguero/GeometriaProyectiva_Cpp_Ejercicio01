@@ -32,19 +32,9 @@ void main(int argc, char** argv) {
 	cout << endl;
 
 
-	/*cout << "Ejercicio01" << endl << endl;
-
-	int valor01 = Ejercicio01::binarioBase10("1010");
-
-	cout << "El numero 1010 binario se corresponde con el valor " << valor01 << " en base 10" << endl;
-
-	cout << endl << endl;*/
-
 	new Ejercicio01("1010");
 
 	cout << endl << endl;
-
-	//cout << "Ejercicio02" << endl << endl;
 
 	new Ejercicio02("1010");
 
